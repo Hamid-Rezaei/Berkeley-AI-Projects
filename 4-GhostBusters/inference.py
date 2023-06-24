@@ -75,7 +75,13 @@ class DiscreteDistribution(dict):
         {}
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        total = self.total()
+        if total == 0 or len(self.copy()) == 0:
+            return
+        else:
+            for key in self.keys():
+                self[key] = self[key] / total
+
 
     def sample(self):
         """
@@ -169,7 +175,18 @@ class InferenceModule:
         Return the probability P(noisyDistance | pacmanPosition, ghostPosition).
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        #check exceptions
+        if noisyDistance is None:
+            if jailPosition == ghostPosition:
+                return 1
+            elif jailPosition != ghostPosition:
+                return 0
+        else:
+            if jailPosition == ghostPosition:
+                return 0
+
+        return busters.getObservationProbability(noisyDistance, manhattanDistance(pacmanPosition, ghostPosition))
+
 
     def setGhostPosition(self, gameState, ghostPosition, index):
         """
@@ -277,7 +294,13 @@ class ExactInference(InferenceModule):
         position is known.
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        for position in self.allPositions:
+            self.beliefs[position] *= self.getObservationProb(
+                observation,
+                pacmanPosition=gameState.getPacmanPosition(),
+                ghostPosition=position,
+                jailPosition=self.getJailPosition()
+            )
 
         self.beliefs.normalize()
 
@@ -291,7 +314,14 @@ class ExactInference(InferenceModule):
         current position is known.
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        temp_dist = DiscreteDistribution()
+        for pos in self.allPositions:
+            temp_dist[pos] = 0
+        for ghost_pos in self.allPositions:
+            new_pos_dist = self.getPositionDistribution(gameState, ghost_pos)
+            for new_pos in new_pos_dist:
+                temp_dist[new_pos] += new_pos_dist[new_pos]* self.beliefs[ghost_pos]
+        self.beliefs = temp_dist
 
     def getBeliefDistribution(self):
         return self.beliefs
