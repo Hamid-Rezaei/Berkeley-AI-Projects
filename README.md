@@ -1,6 +1,6 @@
 # AI Project Spring 2023: The Pac-Man Projects
 
-## Ovwerview
+## Overview
 The Pacman AI Project aims to advance the field of artificial intelligence through the development and evaluation of intelligent agents in the context of the Pacman game. It serves as a playground for exploring different AI algorithms, including search algorithms, adversarial search, reinforcement learning, and probabilistic inference.
 
 ## Each Project Aim
