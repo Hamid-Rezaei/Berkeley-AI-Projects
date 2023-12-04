@@ -1,7 +1,11 @@
 # AI Project Spring 2023: The Pac-Man Projects
 
 ## Overview
-The Pacman AI Project aims to advance the field of artificial intelligence through the development and evaluation of intelligent agents in the context of the Pacman game. It serves as a playground for exploring different AI algorithms, including search algorithms, adversarial search, reinforcement learning, and probabilistic inference.
+The [Pac-Man Projects, developed at UC Berkeley](http://ai.berkeley.edu), aims to advance the field of artificial intelligence through the development and evaluation of intelligent agents in the context of the Pacman game. It serves as a playground for exploring different AI algorithms, including search algorithms, adversarial search, reinforcement learning, and probabilistic inference.
+
+<p align="center">
+<img src="http://ai.berkeley.edu/images/pacman_game.gif" width="540" />
+</p>
 
 ## Each Project Aim
 
@@ -14,5 +18,3 @@ The Pacman AI Project aims to advance the field of artificial intelligence throu
 - ### 4-GhustBusters
    Utilize probabilistic models, such as Bayesian networks and Hidden Markov Models, to reason under uncertainty and make informed decisions in complex situations.
 
-## Gif
-![Animated gif pacman game](http://ai.berkeley.edu/images/pacman_game.gif)
