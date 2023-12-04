@@ -4,7 +4,7 @@
 The [Pac-Man Projects, developed at UC Berkeley](http://ai.berkeley.edu), aims to advance the field of artificial intelligence through the development and evaluation of intelligent agents in the context of the Pacman game. It serves as a playground for exploring different AI algorithms, including search algorithms, adversarial search, reinforcement learning, and probabilistic inference.
 
 <p align="center">
-<img src="http://ai.berkeley.edu/images/pacman_game.gif" width="540" />
+<img src="https://github.com/Hamid-Rezaei/BerkeleyAIProjects/blob/master/overview.gif" width="540" />
 </p>
 
 ## Each Project Aim
